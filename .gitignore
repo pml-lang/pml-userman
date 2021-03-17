@@ -1,0 +1,10 @@
+/bin
+/output
+/temp
+**/examples
+
+# Directories and files starting with ---
+**/---*
+
+# Directories and files starting with NOGIT_
+**/NOGIT_*

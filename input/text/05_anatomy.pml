@@ -21,7 +21,9 @@
             pmlc example.pml
         input]
 
-        Now file [c example.html] can be opened in the browser, and the result looks like this:
+        [note As the above PML document references [c images/strawberries.jpg], file [c resources/images/strawberries.jpg] must exit before executing the above command.]
+
+        Now file [c output/example.html] can be opened in the browser, and the result looks like this:
 
         [image source = <<images_dir>>/03_01_document_example.png border=yes id=simple_document_example]
     ]
@@ -32,10 +34,12 @@
 
         The type of node is determined by a [i tag]. For example:
         [list
-            [el A [i chapter] node has the tag [c chapter], and represents a chapter of an article or book.]
+            [el A [i chapter] node has the tag [c ch], and represents a chapter of an article or book.]
             [el An [c image] node represents an image to be inserted in the document.]
             [el An [c italic] node is used to write text in [i italics].]
         ]
+
+        [-
 
         Every type of node has one standard tag, but can optionally have alternative tags. For example, the standard tag for a chapter node is [c chapter]. Alternatively, the shortcut [c ch] can also be used. Hence, writing:
 
@@ -49,7 +53,9 @@
             [ch title = Chapter 1
         code]
 
-        Every node in a document starts with a [c \[] and ends with a [c \]]. The node's tag is written immediately after the opening [c \[], without a space (e.g. [c \[chapter ... \]] or [c \[ch ... \]]).
+        -]
+
+        Every node in a document starts with a [c \[] and ends with a [c \]]. The node's tag is written immediately after the opening [c \[], without a space (e.g. [c \[doc ... \]] or [c \[ch ... \]]).
 
         You can see the full list of standard tags in the [link url=<<pml_website>>/docs/reference_manual/index.html text = PML Reference Manual].
     ]
@@ -58,24 +64,24 @@
 
         Some nodes have attributes.
 
-        For example, the [c chapter] node has an attribute named [c title], which defines the chapter's title.
+        For example, the [c ch] (chapter) node has an attribute named [c title], which defines the chapter's title.
 
         To assign a value to an attribute, the syntax [c attribute_name = attribute_value] is used. For example:
 
         [code
-            [chapter title = Fundamental Concepts
+            [ch title = Fundamental Concepts
         code]
 
         An attribute value can optionally be quoted. Hence, the above code can also be written like this:
 
         [code
-            [chapter title = "Fundamental Concepts"
+            [ch title = "Fundamental Concepts"
         code]
 
         If an attribute value is embedded within quotes, then quotes within the value must be escaped with a preceding backslash ([c \\ ]). For example:
 
         [code
-            [chapter title = "PPL \"How to ...\" Guide"
+            [ch title = "PPL \"How to ...\" Guide"
         code]
 
         To increase the readability in case of several attributes, each attribute assignment can be written on a separate line. In this case each line, except the last one, must be terminated by a backslash ([c \\ ]), as in the following example:

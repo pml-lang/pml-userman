@@ -1,10 +1,10 @@
 [doc title=PML User Manual \
-    author=Christian Neumanns \
+    authors=Christian Neumanns \
     date=2019-02-07
 
-    [constant examples_dir=input/examples]
-    [constant images_dir=images]
-    [constant pml_website=https://www.pml-lang.dev]
+    [const examples_dir=input/examples]
+    [const images_dir=images]
+    [const pml_website=https://www.pml-lang.dev]
 
     [insert file=01_introduction.pml]
     [insert file=03_quick_start.pml]

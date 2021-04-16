@@ -42,7 +42,7 @@
         ]
 
         [el title = Result:
-            [image src=<<images_dir>>/insert_example.png]
+            [image source=<<images_dir>>/insert_example.png]
         ]
     ]
 

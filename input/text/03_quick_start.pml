@@ -83,7 +83,7 @@
                 C:\tests>
             input]
 
-            [admonition label=Tips
+            [admon label=Tips
                 For more control over the [c convert] command, you can ask for help by typing:
                 [input
                     pmlc command_info --command convert
@@ -105,5 +105,5 @@
     [b 3. Open the HTML file]
 
     Open file [c output/example.html] in your browser. The result looks like this:
-    [image src=<<images_dir>>/simple_example_result.png border=yes]
+    [image source=<<images_dir>>/simple_example_result.png border=yes]
 ]

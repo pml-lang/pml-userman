@@ -6,14 +6,14 @@
 
     There are different ways to customize the style, as explained in the following chapters.
 
-    [chapter title = HTML attributes
+    [ch title = HTML attributes
 
         If you want to change the style (or other HTML attributes) of an [i individual] node then you can define a [i HTML style attribute] for that node, as explained previously.
         You can assign any valid [link url=https://www.w3schools.com/css/ text=CSS] to the node's [c html_style] attribute.
         Please refer to chapter [xref node_id=HTML_attributes] for more information.
     ]
-    
-    [chapter title = CSS
+
+    [ch title = CSS
 
         The final HTML document is styled by standard [link url=https://www.w3schools.com/css/ text=CSS].
 
@@ -27,7 +27,7 @@
             At the time of writing there is only one style sheet delivered with PML, and the name of the CSS file is hard-coded.
 
             Moreover the CSS file is overwritten each time the HTML document is generated. You need to be aware of this if you want to change the CSS code.
-            
+
             Future versions will provide more flexibility.
         ]
 
@@ -94,8 +94,8 @@
             This text is displayed on a yellow background.
         ]
     ]
-    
-    [chapter title = Future
+
+    [ch title = Future
         In order to provide a maximum of customization, more features will be added in future versions. For example, it will be possible to programmatically add new types of nodes, and specify how they are rendered.
         [--
             block node
@@ -105,5 +105,5 @@
             adding new formal nodes programmatically
         --]
     ]
-    
+
 ]

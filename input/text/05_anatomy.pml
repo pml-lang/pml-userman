@@ -39,7 +39,7 @@
             [el An [c italic] node is used to write text in [i italics].]
         ]
 
-        [-
+[-
 
         Every type of node has one standard tag, but can optionally have alternative tags. For example, the standard tag for a chapter node is [c chapter]. Alternatively, the shortcut [c ch] can also be used. Hence, writing:
 
@@ -53,7 +53,7 @@
             [ch title = Chapter 1
         code]
 
-        -]
+-]
 
         Every node in a document starts with a [c \[] and ends with a [c \]]. The node's tag is written immediately after the opening [c \[], without a space (e.g. [c \[doc ... \]] or [c \[ch ... \]]).
 

@@ -4,7 +4,7 @@
 
     [list
         [el Create a PML file]
-        [el Convert the PML file to a HTML file]
+        [el Convert the PML file to an HTML file]
         [el Open the HTML file in your browser]
     ]
 
@@ -19,7 +19,7 @@
         ]
     code]
 
-    [b 2. Convert the PML file to a HTML file]
+    [b 2. Convert the PML file to an HTML file]
 
     You can do this by using the desktop application (GUI) or the command line interface (CLI):
 
@@ -53,10 +53,10 @@
             Open a terminal in the directory of file [c example.pml].
 
             [note
-                For instruction on how to do this in Windows, search for "open a terminal in windows 10", or refer to [link url=https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/ text=this] article.
+                For instruction on how to do this in Windows, search for "open a terminal in Windows 10", or refer to [link url=https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/ text=this] article.
             ]
 
-            Convert the PML file into a HTML file named [c example.html] by entering the following command:
+            Convert the PML file into an HTML file named [c example.html] by entering the following command:
             [input
                 pmlc example.pml
             input]

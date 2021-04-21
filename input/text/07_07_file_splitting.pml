@@ -8,7 +8,7 @@
         [insert file = file_path]
     code]
 
-    [c file_path] can be an absolute or relative path. In case of a relative path, it is relative to the directory of the [c pml] file in which the [c insert] is defined.
+    [c file_path] can be an absolute or relative path. If a relative path, it is relative to the directory of the [c pml] file in which the [c insert] is defined.
 
     [b Example]
 

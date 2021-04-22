@@ -21,7 +21,7 @@
             pmlc example.pml
         input]
 
-        [note As the above PML document references [c images/strawberries.jpg], file [c resources/images/strawberries.jpg] must exit before executing the above command.]
+        [note As the above PML document references [c images/strawberries.jpg], file [c resources/images/strawberries.jpg] must exist before executing the above command.]
 
         Now file [c output/example.html] can be opened in the browser, and the result looks like this:
 
@@ -32,7 +32,7 @@
 
         There are different [i types] of nodes in a document tree.
 
-        The type of node is determined by a [i tag]. For example:
+        The node type is determined by a [i tag]. For example:
         [list
             [el A [i chapter] node has the tag [c ch], and represents a chapter of an article or book.]
             [el An [c image] node represents an image to be inserted in the document.]
@@ -133,7 +133,7 @@
 
         To see if HTML attributes are [i allowed] for a given node, please refer to the [link url=<<pml_website>>/docs/reference_manual/index.html text = PML Reference Manual].
 
-        To see the [i list] of attributes supported for a given node, please refer to the official HML documentation.
+        To see the [i list] of attributes supported for a given node, please refer to the official HTML documentation.
     ]
 
     [ch title=Documentation

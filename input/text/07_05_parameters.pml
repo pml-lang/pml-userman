@@ -1,6 +1,6 @@
 [ch title=Parameters
 
-    If you have text snippets that appear several times in your document, you can use a [i parameter], in order to avoid retyping or copy/pasting the same text again and again.
+    If you have text snippets that appear several times in your document, you can use a [i parameter], to avoid retyping or copy/pasting the same text again and again.
 
     A parameter is composed of an [i identifier] (unique name) and a [i value]. The syntax for assigning a value to a parameter is:
 
@@ -18,7 +18,7 @@
 
     You can define any number of parameters, anywhere in the document. Usually parameters are defined at the beginning of the document, just after the [c document] node. After declaring a parameter, its value can be re-used any number of times in the document.
 
-    Here is an example of an URL that is re-used two times.
+    Here is an example of a URL that is re-used two times.
 
     [list
 

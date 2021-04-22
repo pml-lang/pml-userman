@@ -8,7 +8,7 @@
 
     [ch title = HTML attributes
 
-        If you want to change the style (or other HTML attributes) of an [i individual] node then you can define a [i HTML style attribute] for that node, as explained previously.
+        If you want to change the style (or other HTML attributes) of an [i individual] node then you can define an [i HTML style attribute] for that node, as explained previously.
         You can assign any valid [link url=https://www.w3schools.com/css/ text=CSS] to the node's [c html_style] attribute.
         Please refer to chapter [xref node_id=HTML_attributes] for more information.
     ]
@@ -24,9 +24,9 @@
         You can use the full power of CSS to change the look of your document.
 
         [note
-            At the time of writing there is only one style sheet delivered with PML, and the name of the CSS file is hard-coded.
+            At the moment, only one style sheet is delivered with PML, and the name of the CSS file is hard-coded.
 
-            Moreover the CSS file is overwritten each time the HTML document is generated. You need to be aware of this if you want to change the CSS code.
+            Moreover, the CSS file is overwritten each time the HTML document is generated. You need to be aware of this if you want to change the CSS code.
 
             Future versions will provide more flexibility.
         ]
@@ -37,11 +37,11 @@
         For example, the document title's class is [c pml-document-title].
         Hence, by modifying class [c pml-document-title] in the CSS file, you can change the appearance (font, size, color, etc.) of the document's title.
 
-        If you want to change the style for a given type of node, then you must know the class identifier used to style this node.
+        If you want to change the style for a given node type, then you must know the class identifier used to style this node.
         There are two ways to find out the class identifier.
         [list
             [el
-                You can open the final HTML document in your preferred editor and search the HTML code, in order to find out the class identifier that defines the style.
+                You can open the final HTML document in your preferred editor and search the HTML code, to find out the class identifier that defines the style.
 
                 A more efficient approach would be to use your browser's inspector (typically available under the menu 'Developer tools') to inspect the node and see the class name and CSS code.
             ]
@@ -96,7 +96,7 @@
     ]
 
     [ch title = Future
-        In order to provide a maximum of customization, more features will be added in future versions. For example, it will be possible to programmatically add new types of nodes, and specify how they are rendered.
+        To provide a maximum of customization, more features will be added in future versions. For example, it will be possible to programmatically add new types of nodes, and specify how they are rendered.
         [--
             block node
             inline node

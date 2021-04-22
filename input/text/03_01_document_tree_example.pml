@@ -1,7 +1,7 @@
 [list html_style=padding-top:1em; padding-bottom:1em; border:1px dashed black; border-radius:7px; background:lightyellow;
-[--
+[-
 [list html_style=border:1px dotted black; border-radius:7px; background:#f7f7f7;
---]
+-]
     [el
         [p html_style=margin:0;
             document

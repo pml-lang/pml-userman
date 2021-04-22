@@ -1,22 +1,22 @@
 [ch title=Comments
 
-    A comment starts with [c \[--] and ends with [c --\]]. Comments can appear anywhere, and they can be nested to any level. Text within comments is ignored.
+    A comment starts with [c \[-] and ends with [c -\]]. Comments can appear anywhere, and they can be nested to any level. Text within comments is ignored.
 
     Example:
 
     [list
         [el title = PML code:
             [code
-                This is [-- good --] awesome.
-                [-- TODO: explain why --]
+                This is [- good -] awesome.
+                [- TODO: explain why -]
 
                 Text
-                [--
+                [-
                     This [i bad] text not show.
-                    [-- a
+                    [- a
                         nested
-                        comment --]
-                --]
+                        comment -]
+                -]
 
                 More text
             code]

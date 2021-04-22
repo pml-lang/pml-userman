@@ -97,13 +97,13 @@
 
     [ch title = Future
         To provide a maximum of customization, more features will be added in future versions. For example, it will be possible to programmatically add new types of nodes, and specify how they are rendered.
-        [--
+        [-
             block node
             inline node
             templates
             overwriting standard formal nodes programmatically
             adding new formal nodes programmatically
-        --]
+        -]
     ]
 
 ]

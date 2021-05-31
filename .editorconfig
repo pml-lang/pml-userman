@@ -1,3 +1,8 @@
+#############################################
+#  PML User Manual:                         #
+#  https://github.com/pml-lang/user-manual  #
+#############################################
+
 root = true
 
 ## Repository Configurations
@@ -9,6 +14,40 @@ indent_size = unset
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+
+
+## Markdown GFM
+###############
+[*.md]
+indent_style = space
+indent_size = unset
+end_of_line = unset
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+## Shell Scripts
+################
+[*.sh]
+end_of_line = lf
+indent_style = tab
+indent_size = unset
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+## Batch Scripts
+################
+[*.bat]
+indent_style = tab
+indent_size = unset
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
 
 ## PML Markup
 #############

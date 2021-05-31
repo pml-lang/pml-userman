@@ -1,3 +1,8 @@
+#############################################
+#  PML User Manual:                         #
+#  https://github.com/pml-lang/user-manual  #
+#############################################
+
 /bin
 /output
 /temp
@@ -8,3 +13,97 @@
 
 # Directories and files starting with NOGIT_
 **/NOGIT_*
+
+
+## Misc Work Files
+##################
+
+# Temporary/backup or removed files and folders:
+___*
+___*.*
+
+# Links and URLs
+*.lnk
+*.url
+
+
+## Apps Local Settings & Temp Files
+###################################
+
+# Chrome's debug logs for local HTML pages:
+debug.log
+
+
+############################
+## COMMON IGNORE PATTERNS ##
+############################
+# Based on ".gitignore" created by:
+# https://www.gitignore.io/api/windows,linux,macos
+
+## Linux
+########
+
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+## macOS
+########
+
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+## Windows
+##########
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# End of https://www.gitignore.io/api/windows,linux,macos,purebasic

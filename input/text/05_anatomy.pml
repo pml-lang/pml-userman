@@ -1,149 +1,153 @@
-[ch title=Anatomy of a PML Document
+[ch [title Anatomy of a PML Document]
 
-    [ch title=Document Tree
+    [ch [title Document Tree]
 
         A PML document is a tree composed of PML nodes.
 
         Here is a visual representation of the tree structure of a simple PML document:
 
-        [insert file = 03_01_document_tree_example.pml]
+        [!ins-file path = 03_01_document_tree_example.pml]
 
-        The above document has two chapters. The first chapter is composed of three paragraphs. The second chapter contains a paragraph, followed by an image.
+        The above document has two chapters. The first chapter is composed of a title and three paragraphs. The second chapter contains a title, a paragraph, and an image.
 
         A real document having the above structure would look like this:
 
-        [insert_code file = <<examples_dir>>/simple_document/03_01_document_example.pml \
-            title = File example.pml]
+        [header File example.pml]
+        [insert_code file = [!get examples_dir]/simple_document/03_01_document_example.pml]
 
-        File [c example.pml] can be converted to file [c example.html] with the following command:
+        File [c example.pml] can be converted to file [c output/example.html] with the following command:
 
         [input
             pmlc example.pml
         input]
 
-        [note As the above PML document references [c images/strawberries.jpg], file [c resources/images/strawberries.jpg] must exist before executing the above command.]
+        [note The above PML document uses image file [c images/strawberries.jpg]. By default, all resources used in a document are located in directory [c resources]. Therefore file [c resources/images/strawberries.jpg] must exist before executing the above command.]
 
         Now file [c output/example.html] can be opened in the browser, and the result looks like this:
 
-        [image source = <<images_dir>>/03_01_document_example.png border=yes id=simple_document_example]
+        [image source = [!get images_dir]/03_01_document_example.png border=yes id=simple_document_example]
     ]
 
-    [ch title=Tags
+    [ch [title Nodes]
 
         There are different [i types] of nodes in a document tree.
 
-        The node type is determined by a [i tag]. For example:
+        A node's type is determined by a [i tag]. For example:
         [list
             [el A [i chapter] node has the tag [c ch], and represents a chapter of an article or book.]
             [el An [c image] node represents an image to be inserted in the document.]
             [el An [c italic] node is used to write text in [i italics].]
         ]
 
-[-
-
-        Every type of node has one standard tag, but can optionally have alternative tags. For example, the standard tag for a chapter node is [c chapter]. Alternatively, the shortcut [c ch] can also be used. Hence, writing:
-
-        [code
-            [chapter title = Chapter 1
-        code]
-
-        ... is equivalent to writing
-
-        [code
-            [ch title = Chapter 1
-        code]
-
--]
-
         Every node in a document starts with a [c \[] and ends with a [c \]]. The node's tag is written immediately after the opening [c \[], without a space (e.g. [c \[doc ... \]] or [c \[ch ... \]]).
 
-        You can see the full list of standard tags in the [link url=<<pml_website>>/docs/reference_manual/index.html text = PML Reference Manual].
+        A node can be empty, contain only text, or contain a mixture of text and child nodes.
+        A node's tag and its content are separated by a space.
+        Here are three examples:
+
+        [code
+            [nl]
+            [i node containing only text displayed in italics]
+            [p A [i simple] paragraph with [b six] words.]
+        code]
+
+        The full list of nodes is documented in the [link url=[!get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
     ]
 
-    [ch title=Attributes
+    [ch [title Attributes]
 
         Some nodes have attributes.
 
-        For example, the [c ch] (chapter) node has an attribute named [c title], which defines the chapter's title.
+        Some attributes are required, and some are optional.
 
-        To assign a value to an attribute, the syntax [c attribute_name = attribute_value] is used. For example:
-
-        [code
-            [ch title = Fundamental Concepts
-        code]
-
-        An attribute value can optionally be quoted. Hence, the above code can also be written like this:
+        For example, the [c image] node has a [i required] attribute named [c source], which defines the image's file path.
+        Moreover it has some [i optional] attributes, such as [c width] and [c height], to explicitly define the image's dimensions in pixels.
+        Here is an example of an [c image] node with values assigned to attributes [c source] and [c width]:
 
         [code
-            [ch title = "Fundamental Concepts"
+            [image ( source="images/juicy apple.png" width="400" ) ]
         code]
 
-        If an attribute value is embedded within quotes, then quotes within the value must be escaped with a preceding backslash ([c \\ ]). For example:
-
-        [code
-            [ch title = "PPL \"How to ...\" Guide"
-        code]
-
-        To increase the readability in case of several attributes, each attribute assignment can be written on a separate line. In this case each line, except the last one, must be terminated by a backslash ([c \\ ]), as in the following example:
-
-        [code
-            [image source = images/ball.png \
-                width = 300 \
-                height = 200 \
-                border = yes]
-        code]
-
-        Some attributes are required, others are optional. For instance, in the above example attribute [c source] is required, all others are optional.
-
-        The list of attributes for each node is documented in the [link url=<<pml_website>>/docs/reference_manual/index.html text = PML Reference Manual].
-    ]
-
-    [ch title=HTML Attributes id=HTML_attributes
-
-        [i HTML attributes] can optionally be specified for some nodes.
-
-        This is sometimes useful to explicitly set HTML attributes in the resulting HTML code. The most frequent use of HTML attributes is to explicitly set the [c style] for a specific element.
-
-        An HTML attribute name starts with [c html_], followed by the real HTML attribute name. Thus, to specify a [c style] attribute in the resulting HTML code, you would write for example: [c html_style=color:red;]. Any valid CSS can be assigned to a [c html_style] attribute.
-
-        Suppose you want to write a paragraph in red letters, surrounded by a blue dashed border. Here is how it works:
+        As we can see:
 
         [list
 
-            [el title = PML code:
+            [el
+                Attributes are enclosed in parentheses:
+                [code()
+                    ( ... )
+                code]
+            ]
+
+            [el
+                The syntax [c name = "value"] is used to assign a value to an attribute. For example:
                 [code
-                    [p html_style = color:red; border:1px dashed blue
+                    width="400"
+                code]
+            ]
+
+            [el
+                Attribute assignments are separated by a space. No comma is needed:
+                [code()
+                    (a1="v1" a2="v2")
+                            ^
+                code]
+            ]
+        ]
+
+        The list of available attributes for each node is documented in the [link url=[!get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+    ]
+
+    [ch (id=HTML_attributes) [title HTML Attributes]
+
+        [i HTML attributes] can optionally be specified for some nodes.
+
+        This is used to explicitly set HTML attributes in the resulting HTML code. The most frequent use of HTML attributes is to explicitly set the [c style] for a specific element.
+
+        An HTML attribute name starts with [c html_], followed by the real HTML attribute name. Thus, to specify a [c style] attribute in the resulting HTML code, you would write for example: [c html_style="color:red;"]. Any valid CSS can be assigned to a [c html_style] attribute.
+
+        Suppose we want to write a paragraph in red letters, surrounded by a blue dashed border. We can do it like this:
+
+        [list
+
+            [el [header PML code:]
+                [code
+                    [p (html_style = "color:red; border:1px dashed blue")
                         It is important to note that ...
                     ]
                 code]
             ]
 
-            [el title = Result:
-                [p html_style = color:red; border:1px dashed blue
+            [el [header Result:]
+                [p (html_style = "color:red; border:1px dashed blue")
                     It is important to note that ...
                 ]
             ]
 
-            [el title = Generated HTML code:
+            [el [header Generated HTML code:]
                 [code
                     <p style="color:red; border:1px dashed blue" class="pml-paragraph">It is important to note that ... </p>
                 code]
             ]
         ]
 
-        To see if HTML attributes are [i allowed] for a given node, please refer to the [link url=<<pml_website>>/docs/reference_manual/index.html text = PML Reference Manual].
+        To see if HTML attributes are [i allowed] for a given node, please refer to the [link url=[!get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
 
-        To see the [i list] of attributes supported for a given node, please refer to the official HTML documentation.
+        To see the [i list] of attributes supported for a given node, please refer to the official HTML specification.
     ]
 
-    [ch title=Documentation
+    [ch [title Documentation]
 
-        As said already, all nodes are documented in the [link url=<<pml_website>>/docs/reference_manual/index.html text = PML Reference Manual].
+        As said already, all nodes and their attributes are documented in the [link url=[!get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
 
         Another way to get information about nodes is to use the integrated help of the PML Converter. You can type the following command in a terminal to get an overview of how to use it:
-
         [input
             pmlc help
+        input]
+
+        For help on a specific node (such as [c image]), the [c tag_info] command can be used:
+        [input
+            pmlc tag_info -tag image
         input]
     ]
 ]

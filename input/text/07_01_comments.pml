@@ -1,11 +1,11 @@
-[ch title=Comments
+[ch [title Comments]
 
     A comment starts with [c \[-] and ends with [c -\]]. Comments can appear anywhere, and they can be nested to any level. Text within comments is ignored.
 
     Example:
 
     [list
-        [el title = PML code:
+        [el [header PML code:]
             [code
                 This is [- good -] awesome.
                 [- TODO: explain why -]
@@ -22,7 +22,7 @@
             code]
         ]
 
-        [el title = Result:
+        [el [header Result:]
             [code
                 This is awesome.
 

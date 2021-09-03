@@ -1,6 +1,6 @@
-[ch title=Quick Start
+[ch [title Quick Start]
 
-    After [link url=<<pml_website>>/downloads/install.html text=installing] PML, you can create a web document in three easy steps:
+    After [link url=[!get pml_website]/downloads/install.html text=installing] PML, you can create a web document in three easy steps:
 
     [list
         [el Create a PML file]
@@ -14,7 +14,7 @@
 
     Use your preferred text editor to create a text file named [c example.pml] in any directory of your choice, and with the following content:
     [code
-        [doc title=First test
+        [doc [title First test]
             This is a [i simple] example.
         ]
     code]
@@ -25,7 +25,7 @@
 
     [list
 
-        [el title=Desktop Application (GUI)
+        [el [header Desktop Application (GUI)]
 
             [list
                 [el Open the application named [i PML to HTML Converter] in your operating system's applications menu (on Windows the application is located under the menu [i Practical Markup Language]).]
@@ -33,7 +33,9 @@
                 [el
                     Fill in fields [c PML file to convert] and [c Directory of HTML document]. Here is an example of the window with the fields filled out (Windows version):
 
-                    [image source=<<images_dir>>/PML_GUI_parameters.png width=600]
+                    [image source=[!get images_dir]/PML_GUI_parameters.png width=600]
+
+                    [note The above image only shows a reduced set of the fields actually displayed in the window.]
                 ]
 
                 [el Click the [c Convert] button.]
@@ -41,19 +43,19 @@
                 [el
                     A confirmation message like the following one is displayed:
 
-                    [image source=<<images_dir>>/PML_GUI_confirmation.png]
+                    [image source=[!get images_dir]/PML_GUI_confirmation.png]
                 ]
             ]
         ]
 
-        [el title=Command Line Interface (CLI)
+        [el [header Command Line Interface (CLI)]
 
             Instead of using the desktop application, you can use PML's command line interface.
 
             Open a terminal in the directory of file [c example.pml].
 
             [note
-                For instruction on how to do this in Windows, search for "open a terminal in Windows 10", or refer to [link url=https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/ text=this] article.
+                For instructions on how to do this in Windows, search for "open a terminal in Windows 10", or refer to [link url=https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/ text=this] article.
             ]
 
             Convert the PML file into an HTML file named [c example.html] by entering the following command:
@@ -83,18 +85,23 @@
                 C:\tests>
             input]
 
-            [admon label=Tips
-                For more control over the [c convert] command, you can ask for help by typing:
+            [admon (label=Tips)
+                For more control over the conversion process, you can also use the [c convert] command:
+                [input
+                    pmlc convert --input_file example.pml
+                input]
+                The [c convert] command has a number of options.
+                For information about its command line arguments, type:
                 [input
                     pmlc command_info --command convert
                 input]
 
-                For general help you can type:
+                For general help type:
                 [input
                     pmlc help
                 input]
 
-                You can open the desktop application from the CLI by typing the following command:
+                You can open the desktop application from the terminal by simply typing:
                 [input
                     pmlc
                 input]
@@ -105,5 +112,5 @@
     [b 3. Open the HTML file]
 
     Open file [c output/example.html] in your browser. The result looks like this:
-    [image source=<<images_dir>>/simple_example_result.png border=yes]
+    [image source=[!get images_dir]/simple_example_result.png border=yes]
 ]

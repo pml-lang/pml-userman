@@ -1,7 +1,7 @@
 [doc [title PML User Manual]
     Author: Christian Neumanns
 
-    Date: 2021-09-03
+    Date: 2021-09-09
 
     [!set examples_dir=input/examples]
     [!set images_dir=images]

@@ -1,4 +1,4 @@
-[ch [title Escape Characters]
+[ch (id=escape_characters) [title Escape Characters]
 
     Character escape rules in [i node text] and [i attribute values] are slightly different, as explained in the following chapters.
 
@@ -44,7 +44,8 @@
             Tab, \t, no
             Carriage return, \r, no
             Line feed, \n, no
-            Unicode escape, \uhhhh (e.g. \u2764 for a heart symbol), no
+            Unicode escape 4 hex digits, \uhhhh (e.g. \u2764 for "heart shape": ♥), no
+            Unicode escape 8 hex digits, \Uhhhhhhhh (e.g. \U0001F600 for "grinning face": 😀), no
         table_data]
     ]
 
@@ -63,7 +64,8 @@
             Tab, \t, no
             Carriage return, \r, no
             Line feed, \n, no
-            Unicode escape, \uhhhh (e.g. \u2764 for a heart symbol), no
+            Unicode escape 4 hex digits, \uhhhh (e.g. \u2764 for "heart shape": ♥), no
+            Unicode escape 8 hex digits, \Uhhhhhhhh (e.g. \U0001F600 for "grinning face": 😀), no
         table_data]
 
         Example: Suppose we want to assign the value [c C:\\temp\\test.txt] to attribute [c path]. In this case the value can be quoted or unquoted. If the value is quoted then [c \\] must be escaped:

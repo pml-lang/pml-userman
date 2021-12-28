@@ -45,7 +45,7 @@
 
     The syntax rules for assigning values to parameters are the same as those for attributes (lenient parsing, whitespace, and character escapes).
 
-    A parameter identifier must start with a letter and can be followed by any number of letters, digits, underscores, and hyphens. Note for programmers: The regex of an identifier is: [c \[a-zA-Z\]\[a-zA-Z0-9_-\]*]. Identifiers are case-sensitive. The following identifiers are all different: [c name], [c Name], and [c NAME].
+    A parameter identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, hyphens, and dots. Note for programmers: The regex of an identifier is: [c \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*]. Identifiers are case-sensitive. The following identifiers are all different: [c name], [c Name], and [c NAME].
 
     You can assign several parameters in a single [c set] node. For example:
     [code

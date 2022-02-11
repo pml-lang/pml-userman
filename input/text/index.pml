@@ -1,16 +1,21 @@
 [doc [title PML User Manual]
-    Author: Christian Neumanns
 
-    Latest Update: 2021-12-14
+    [table
+        [tr [tc [b PML Version]][tc 2.3.0 2022-02-11]]
+        [tr [tc [b License]][tc [link url=https://creativecommons.org/licenses/by-nd/4.0/ text="CC BY-ND 4.0"]]]
+        [tr [tc [b Author and Copyright]][tc Christian Neumanns]]
+        [tr [tc [b Website]][tc [link url=https://www.pml-lang.dev/]]]
+        [tr [tc [b PML Markup Code]][tc [link url=https://github.com/pml-lang/user-manual text=Github]]]
+    ]
 
     [!set examples_dir=input/examples]
     [!set images_dir=images]
     [!set pml_website=https://www.pml-lang.dev]
 
-    [!ins-file path=01_introduction.pml]
-    [!ins-file path=03_00_quick_start.pml]
-    [!ins-file path=05_anatomy.pml]
-    [!ins-file path=07_00_text_processing.pml]
-    [!ins-file path=09_TOC.pml]
-    [!ins-file path=11_customization.pml]
+    [u:ins_file path=01_introduction.pml]
+    [u:ins_file path=03_00_quick_start.pml]
+    [u:ins_file path=05_anatomy.pml]
+    [u:ins_file path=07_00_text_processing.pml]
+    [u:ins_file path=09_TOC.pml]
+    [u:ins_file path=11_customization.pml]
 ]

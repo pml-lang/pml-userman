@@ -6,7 +6,7 @@
 
         Here is a visual representation of the tree structure of a simple PML document:
 
-        [!ins-file path = 03_01_document_tree_example.pml]
+        [u:ins_file path = 03_01_document_tree_example.pml]
 
         The above document has two chapters. The first chapter is composed of a title and three paragraphs. The second chapter contains a title, a paragraph, and an image.
 

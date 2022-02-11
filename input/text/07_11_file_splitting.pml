@@ -5,10 +5,10 @@
     The syntax to insert a [c pml] file at the current location is:
 
     [code
-        [!ins-file path = file_path]
+        [u:ins_file path = file_path]
     code]
 
-    [c file_path] can be an absolute or relative path. If it's a relative path, it's relative to the directory of the [c pml] file in which the [c ins-file] is used.
+    [c file_path] can be an absolute or relative path. If it's a relative path, it's relative to the directory of the [c pml] file in which [c ins_file] is used.
 
     [b Example]
 
@@ -35,8 +35,8 @@
 
             [code
                 [doc [title Book]
-                    [!ins-file path = chapters/chapter_1.pml]
-                    [!ins-file path = chapters/chapter_2.pml]
+                    [u:ins_file path = chapters/chapter_1.pml]
+                    [u:ins_file path = chapters/chapter_2.pml]
                 ]
             code]
         ]

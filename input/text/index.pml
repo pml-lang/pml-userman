@@ -1,16 +1,16 @@
 [doc [title PML User Manual]
 
     [table
-        [tr [tc [b PML Version]][tc 2.3.0 2022-02-11]]
+        [tr [tc [b PML Version]][tc 3.0.0 2022-08-07]]
         [tr [tc [b License]][tc [link url=https://creativecommons.org/licenses/by-nd/4.0/ text="CC BY-ND 4.0"]]]
         [tr [tc [b Author and Copyright]][tc Christian Neumanns]]
         [tr [tc [b Website]][tc [link url=https://www.pml-lang.dev/]]]
         [tr [tc [b PML Markup Code]][tc [link url=https://github.com/pml-lang/user-manual text=Github]]]
     ]
 
-    [!set examples_dir=input/examples]
-    [!set images_dir=images]
-    [!set pml_website=https://www.pml-lang.dev]
+    [u:set examples_dir=input/examples]
+    [u:set images_dir=images]
+    [u:set pml_website=https://www.pml-lang.dev]
 
     [u:ins_file path=01_introduction.pml]
     [u:ins_file path=03_00_quick_start.pml]

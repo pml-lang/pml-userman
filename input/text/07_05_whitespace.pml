@@ -1,4 +1,4 @@
-[ch [title Whitespace Handling]
+[ch (id=whitespace_handling) [title Whitespace Handling]
 
     PML uses whitespace handling rules that aim to be simple, intuitive, practical, and consistent. It is important to be aware of these rules, because ignoring them can lead to surprising or unwanted results, especially in edge cases.
 
@@ -37,7 +37,7 @@
 
     Whitespace is handled differently in nodes and attributes, as explained in the following chapters.
 
-    [ch [title Nodes]
+    [ch (id=nodes_whitespace) [title Nodes]
 
         Whitespace in nodes is handled as follows:
 
@@ -156,14 +156,14 @@
         ]
     ]
 
-    [ch [title Attributes]
+    [ch (id=attributes_whitespace) [title Attributes]
 
         Whitespace in attributes is handled as follows:
 
         [list
             [el [header Whitespace elimination]
 
-                Whitespace around attribute symbols is ignored. The following three [c image] nodes are semantically equivalent:
+                Whitespace around attribute symbols ([c() (], [c )], and [c =]) is ignored. The following three [c image] nodes are semantically equivalent:
                 [code
                     [image ( source = "images/juicy apple.png" width = "400" height = "200" ) ]
 
@@ -181,7 +181,7 @@
 
                 As [xref node_id=omit_attribute_quotes text="stated already"], [i unquoted] attribute values cannot contain whitespace. Instead of writing [c color = light orange], we must write [c color = "light orange"]
 
-                On the other hand, [i quoted] attribute values can contain whitespace (any sequences of spaces, tabs, and new lines). Whitespace within a quoted value is preserved.
+                On the other hand, [i quoted] attribute values can contain whitespace (any sequences of spaces, tabs, and new lines). Whitespace within a [i quoted] value is preserved.
 
                 Suppose we want to assign the following value to attribute [c quote]:
                 [code

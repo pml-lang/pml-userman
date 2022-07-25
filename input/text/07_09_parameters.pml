@@ -1,19 +1,20 @@
 [ch (id=parameters) [title Parameters]
 
-    If you have text or markup snippets appearing several times in a document, you can use a [i parameter] to avoid retyping or copy/pasting the same text again and again.
+    Sometimes the same text or markup code appears several times in a document.
+    In such cases you can use a [i parameter] to avoid retyping or copy/pasting the same text again and again.
 
     A parameter is composed of an [i identifier] (unique name) and a [i value]. The syntax for assigning a value to a parameter is:
 
     [code
-        [!set name = value]
+        [u:set name = value]
     code]
 
-    Note the mandatory [c !] before the node name [c set]. Node names starting with [c !] are nodes related to text processing.
+    Note the mandatory [c u:] before the node name [c set]. The prefix [c u:] defines a namespace with identifier [c u], which stands for [i utility] node. This is necessary to make a distinction between normal PML nodes that [i contain] text, and other nodes that are used to [i handle] text (text processing).
 
     The value assigned to a parameter can be re-used in the document with the following syntax:
 
     [code
-        [!get name]
+        [u:get name]
     code]
 
     Here is an example of a URL that is re-used two times.
@@ -22,20 +23,20 @@
 
         [el [header PML code:]
             [code
-                [!set docs_root_URL = http://www.example.com/project/docs/public]
+                [u:set docs_root_URL = http://www.example.com/project/docs/public]
 
-                For an overview please read the article [link url=[!get docs_root_URL]/concepts.html text="Basic Concepts"].
+                For an overview please read the article [link url=[u:get docs_root_URL]/concepts.html text="Basic Concepts"].
 
-                For detailed information please refer to the [link url=[!get docs_root_URL]/user_manual.html text="User Manual"].
+                For detailed information please refer to the [link url=[u:get docs_root_URL]/user_manual.html text="User Manual"].
             code]
         ]
 
         [el [header Result:]
-            [!set docs_root_URL = http://www.example.com/project/docs/public]
+            [u:set docs_root_URL = http://www.example.com/project/docs/public]
 
-            For an overview please read the article [link url=[!get docs_root_URL]/concepts.html text="Basic Concepts"].
+            For an overview please read the article [link url=[u:get docs_root_URL]/concepts.html text="Basic Concepts"].
 
-            For detailed information please refer to the [link url=[!get docs_root_URL]/user_manual.html text="User Manual"].
+            For detailed information please refer to the [link url=[u:get docs_root_URL]/user_manual.html text="User Manual"].
         ]
     ]
 
@@ -43,13 +44,13 @@
 
     After assigning a value to a parameter, its value cannot be changed later in the document. Parameters are like [i constants] in programming languages.
 
-    The syntax rules for assigning values to parameters are the same as those for attributes (lenient parsing, whitespace, and character escapes).
+    The syntax rules for assigning values to parameters are the same as those for attributes ([xref node_id=lenient_parsing text="lenient parsing"], [xref node_id=attributes_whitespace text="whitespace handling"], and [xref node_id=attribute_escape_characters text="character escapes"]).
 
     A parameter identifier must start with a letter or an underscore, and can be followed by any number of letters, digits, underscores, hyphens, and dots. Note for programmers: The regex of an identifier is: [c \[a-zA-Z_\]\[a-zA-Z0-9_\\.-\]*]. Identifiers are case-sensitive. The following identifiers are all different: [c name], [c Name], and [c NAME].
 
     You can assign several parameters in a single [c set] node. For example:
     [code
-        [!set
+        [u:set
             color = "deep blue"
             default_width = 300
         ]
@@ -62,35 +63,35 @@
     Re-inserting this code several times would be cumbersome. Worse, it would be hard to maintain. For example, if the logo's dimensions are changed later, the change must be done everywhere the node is used.
     These inconveniences can easily be eliminated by using a parameter. Here is the code to define the code once and re-use it two times:
     [code
-        [!set company_logo = "[image source=images/company_logo.png width=200 height=200 border=yes]"]
+        [u:set company_logo = "[image source=images/company_logo.png width=200 height=200 border=yes]"]
         ...
-        [!get company_logo]
+        [u:get company_logo]
         ...
-        [!get company_logo]
+        [u:get company_logo]
     code]
 [- test
-        [!set company_logo = "[image source=images/company_logo.png width=200 height=200 border=yes]"]
+        [u:set company_logo = "[image source=images/company_logo.png width=200 height=200 border=yes]"]
         ...
-        [!get company_logo]
+        [u:get company_logo]
         ...
-        [!get company_logo]
+        [u:get company_logo]
 -]
     If the dimensions are changed later, you just need to make the change at one place.
 
     Parameters can use other parameters that have already been defined in the document. For example, you might want to define a common root directory once, and re-use it in the definition of subsequent parameters:
     [code
-        [!set root_directory = /foo/bar/]
-        [!set images_directory = "[!get root_directory]images"]
-        [!set examples_directory = "[!get root_directory]examples"]
+        [u:set root_directory = /foo/bar/]
+        [u:set images_directory = "[u:get root_directory]images"]
+        [u:set examples_directory = "[u:get root_directory]examples"]
 
-        [p Images: [!get images_directory]]
-        [p Examples: [!get examples_directory]]
+        [p Images: [u:get images_directory]]
+        [p Examples: [u:get examples_directory]]
     code]
     This is rendered as:
-    [!set root_directory = /foo/bar/]
-    [!set images_directory = "[!get root_directory]images"]
-    [!set examples_directory = "[!get root_directory]examples"]
+    [u:set root_directory = /foo/bar/]
+    [u:set images_directory = "[u:get root_directory]images"]
+    [u:set examples_directory = "[u:get root_directory]examples"]
 
-    [p Images: [!get images_directory]]
-    [p Examples: [!get examples_directory]]
+    [p Images: [u:get images_directory]]
+    [p Examples: [u:get examples_directory]]
 ]

@@ -2,7 +2,7 @@
 
     Character escape rules in [i node text] and [i attribute values] are slightly different, as explained in the following chapters.
 
-    [ch [title Nodes]
+    [ch (id=node_escape_characters) [title Nodes]
 
         As seen already, characters [c \[] and [c \]] define the start and end of a node.
 
@@ -49,7 +49,7 @@
         table_data]
     ]
 
-    [ch [title Attributes]
+    [ch (id=attribute_escape_characters) [title Attributes]
 
         Escape sequences are not supported in [i un]quoted attribute values.
 

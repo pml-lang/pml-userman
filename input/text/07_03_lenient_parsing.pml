@@ -36,6 +36,7 @@
             code]
         ]
 
+[-
         [el
             Some nodes have a [i default] attribute. In that case, the attribute's name doesn't need to be specified, but only if it's the first attribute in the list of attribute assignments.
 
@@ -49,6 +50,7 @@
                 [image ( "images/juicy apple.png" width="400" ) ]
             code]
         ]
+-]
 
         [el
             If a node in a PML document has no attributes, it is not necessary to explicitly state the absence of attributes by writing [c() ()].
@@ -83,8 +85,13 @@
         [image ( source = "images/juicy apple.png" width = "400" ) ]
     code]
     ... can be shortened to:
+[-
     [code
         [image "images/juicy apple.png" width=400]
+    code]
+-]
+    [code
+        [image source="images/juicy apple.png" width=400]
     code]
 ]
 

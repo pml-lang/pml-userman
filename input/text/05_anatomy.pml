@@ -13,36 +13,36 @@
         A real document having the above structure would look like this:
 
         [header File example.pml]
-        [insert_code file = [!get examples_dir]/simple_document/03_01_document_example.pml]
+        [insert_code file = [u:get examples_dir]/simple_document/03_01_document_example.pml]
 
         File [c example.pml] can be converted to file [c output/example.html] with the following command:
 
         [input
-            pmlc example.pml
+            pmlc p2h example.pml
         input]
 
         [note The above PML document uses image file [c images/strawberries.jpg]. By default, all resources used in a document are located in directory [c resources]. Therefore file [c resources/images/strawberries.jpg] must exist before executing the above command.]
 
         Now file [c output/example.html] can be opened in the browser, and the result looks like this:
 
-        [image source = [!get images_dir]/03_01_document_example.png border=yes id=simple_document_example]
+        [image source = [u:get images_dir]/03_01_document_example.png border=yes id=simple_document_example]
     ]
 
     [ch [title Nodes]
 
         There are different [i types] of nodes in a document tree.
 
-        A node's type is determined by a [i tag]. For example:
+        A node's type is determined by a [i name]. For example:
         [list
-            [el A [i chapter] node has the tag [c ch], and represents a chapter of an article or book.]
+            [el A [i chapter] node has the name [c ch], and represents a chapter of an article or book.]
             [el An [c image] node represents an image to be inserted in the document.]
-            [el An [c italic] node is used to write text in [i italics].]
+            [el An [i italic] node has the name [c i], and is used to write text in [i italics].]
         ]
 
-        Every node in a document starts with a [c \[] and ends with a [c \]]. The node's tag is written immediately after the opening [c \[], without a space (e.g. [c \[doc ... \]] or [c \[ch ... \]]).
+        Every node in a document starts with [c \[] and ends with [c \]]. The node's name (always required) is written immediately after the opening [c \[], without a space (e.g. [c \[doc ... \]] or [c \[ch ... \]]).
 
-        A node can be empty, contain only text, or contain a mixture of text and child nodes.
-        A node's tag and its content are separated by a space.
+        A node can be empty (it has a name, but no content), contain only text, or contain a mixture of text and child nodes.
+        A node's name and its content are separated by a whitespace character (a space, TAB, or new line).
         Here are three examples:
 
         [code
@@ -51,7 +51,7 @@
             [p A [i simple] paragraph with [b six] words.]
         code]
 
-        The full list of nodes is documented in the [link url=[!get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+        The full list of nodes is documented in the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
     ]
 
     [ch [title Attributes]
@@ -95,7 +95,7 @@
             ]
         ]
 
-        The list of available attributes for each node is documented in the [link url=[!get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+        The list of available attributes for each node is documented in the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
     ]
 
     [ch (id=HTML_attributes) [title HTML Attributes]
@@ -126,19 +126,20 @@
 
             [el [header Generated HTML code:]
                 [code
-                    <p style="color:red; border:1px dashed blue" class="pml-paragraph">It is important to note that ... </p>
+                    <p class="pml-paragraph" style="color:red; border:1px dashed blue">It is important to note that ... </p>
                 code]
             ]
         ]
 
-        To see if HTML attributes are [i allowed] for a given node, please refer to the [link url=[!get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+        To see if HTML attributes are [i allowed] for a given node, please refer to the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
 
         To see the [i list] of attributes supported for a given node, please refer to the official HTML specification.
     ]
 
+[- TODO Uncomment as soon as command 'tag_info' is available again
     [ch [title Documentation]
 
-        As said already, all nodes and their attributes are documented in the [link url=[!get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
+        As said already, all nodes and their attributes are documented in the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
 
         Another way to get information about nodes is to use the integrated help of the PML Converter. You can type the following command in a terminal to get an overview of how to use it:
         [input
@@ -150,4 +151,5 @@
             pmlc tag_info -tag image
         input]
     ]
+-]
 ]

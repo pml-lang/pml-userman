@@ -42,7 +42,7 @@
         ]
 
         [el [header Result:]
-            [image source=[!get images_dir]/insert_example.png]
+            [image source=[u:get images_dir]/insert_example.png]
         ]
     ]
 

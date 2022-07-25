@@ -1,17 +1,29 @@
 # PML User Manual
 
-This repository contains the PML markup code used to create the [PML User Manual](https://www.pml-lang.dev/docs/user_manual/index.html).
+This repository contains the PML markup code used to create the [PML User Manual].
 
 ## Create an HTML Version
 
-You can create an HTML version of the user manual like this:
-- If not done already, [install](https://www.pml-lang.dev/downloads/install.html) the _PML-Converter_
-- Create a local copy of this repository
-- Open a terminal in the root directory of your local repository
+To build an HTML version of the User Manual from this source repository:
+
+- If you haven't already done so, [install the _PML Companion_].
+- Create a local copy of this repository.
+- Open a terminal in the root directory of your local repository.
 - Execute the following OS command:
-  
-  `pmlc convert --input_file input/text/index.pml`
+
+        pmlc p2h input/text/index.pml
+
 
 ## More Info
 
-For more information about PML please visit its [website](https://www.pml-lang.dev).
+For more information about PML, please visit the [PML website].
+
+<!-----------------------------------------------------------------------------
+                               REFERENCE LINKS
+------------------------------------------------------------------------------>
+
+[PML website]: https://www.pml-lang.dev "Visit the PML website"
+[PML User Manual]: https://www.pml-lang.dev/docs/user_manual/index.html "View the online PML User Manual"
+[install the _PML Companion_]: https://www.pml-lang.dev/downloads/install.html "Go to PMLC download page"
+
+<!-- EOF -->

@@ -6,7 +6,7 @@
 /bin
 /output
 /temp
-**/examples_creator
+/examples_creator
 
 # Directories and files starting with ---
 **/---*

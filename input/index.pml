@@ -8,7 +8,6 @@
         [tr [tc [b PML Markup Code]][tc [link url=https://github.com/pml-lang/user-manual text=Github]]]
     ]
 
-    [u:set examples_dir=input/examples]
     [u:set images_dir=images]
     [u:set pml_website=https://www.pml-lang.dev]
 

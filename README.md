@@ -11,7 +11,7 @@ To build an HTML version of the User Manual from this source repository:
 - Open a terminal in the root directory of your local repository.
 - Execute the following OS command:
 
-        pmlc p2h input/text/index.pml
+        pmlc p2h input/index.pml
 
 
 ## More Info

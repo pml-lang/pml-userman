@@ -1,60 +1,81 @@
-#############################################
-#  PML User Manual:                         #
-#  https://github.com/pml-lang/user-manual  #
-#############################################
-
 root = true
+
 
 ## Repository Configurations
 ############################
 [.{git*,editorconfig,*.yml}]
+charset = utf-8
 end_of_line = lf
-indent_style = space
 indent_size = unset
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-
-## Markdown GFM
-###############
-[*.md]
 indent_style = space
-indent_size = unset
-end_of_line = unset
-charset = utf-8
-trim_trailing_whitespace = true
 insert_final_newline = true
+trim_trailing_whitespace = true
+
+[.gitmodules]
+indent_style = tab
+
+[.gitkeep]
+insert_final_newline = false
 
 
 ## Shell Scripts
 ################
 [*.sh]
-end_of_line = lf
-indent_style = tab
-indent_size = unset
 charset = utf-8
-trim_trailing_whitespace = true
+end_of_line = lf
+indent_size = unset
+indent_style = tab
 insert_final_newline = true
+trim_trailing_whitespace = true
 
 
 ## Batch Scripts
 ################
-[*.bat]
-indent_style = tab
-indent_size = unset
+[*.{bat,cmd}]
+charset = utf-8
 end_of_line = crlf
-charset = utf-8
-trim_trailing_whitespace = true
+indent_size = unset
+indent_style = tab
 insert_final_newline = true
+trim_trailing_whitespace = true
 
 
-## PML Markup
-#############
+## PML Sources
+##############
 [*.pml]
-indent_style = space
-indent_size = 4
-end_of_line = unset
 charset = utf-8
-trim_trailing_whitespace = true
+end_of_line = unset
+indent_size = 4
+indent_style = space
 insert_final_newline = true
+trim_trailing_whitespace = true
+
+
+## Markdown GFM
+###############
+[*.md]
+charset = utf-8
+end_of_line = unset
+indent_size = unset
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+
+## Plain-Text Files
+###################
+[*.txt]
+charset = utf-8
+indent_size = unset
+indent_style = space
+end_of_line = unset
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[{LICENSE,README}]
+charset = utf-8
+end_of_line = unset
+indent_size = unset
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true

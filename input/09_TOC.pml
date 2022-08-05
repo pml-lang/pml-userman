@@ -1,4 +1,4 @@
-[ch [title Table of Contents]
+[ch (id=toc) [title Table of Contents]
 
     By default, a table of contents (TOC) is created on the left side of the HTML page, as shown [xref node_id=simple_document_example text=before].
 

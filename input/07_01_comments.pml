@@ -1,4 +1,4 @@
-[ch [title Comments]
+[ch (id=comments) [title Comments]
 
     A comment starts with [c \[-] and ends with [c -\]]. Comments can appear anywhere, and they can be nested to any level. Text within comments is ignored.
 

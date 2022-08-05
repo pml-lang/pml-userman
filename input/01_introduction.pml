@@ -1,4 +1,4 @@
-[ch [title Introduction]
+[ch (id=introduction) [title Introduction]
 
     This manual is about creating web articles and books with the [link url=https://www.pml-lang.dev/ text="Practical Markup Language (PML)"].
 

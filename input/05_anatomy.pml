@@ -1,6 +1,6 @@
-[ch [title Anatomy of a PML Document]
+[ch (id=anatomy) [title Anatomy of a PML Document]
 
-    [ch [title Document Tree]
+    [ch (id=document_tree) [title Document Tree]
 
         A PML document is a tree composed of PML nodes.
 
@@ -49,7 +49,7 @@
         [image source = [u:get images_dir]/03_01_document_example.png border=yes id=simple_document_example]
     ]
 
-    [ch [title Nodes]
+    [ch (id=nodes) [title Nodes]
 
         There are different [i types] of nodes in a document tree.
 
@@ -75,7 +75,7 @@
         The full list of nodes is documented in the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
     ]
 
-    [ch [title Attributes]
+    [ch (id=attributes) [title Attributes]
 
         Some nodes have attributes.
 

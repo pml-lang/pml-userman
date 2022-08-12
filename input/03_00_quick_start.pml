@@ -59,7 +59,7 @@
             Open a terminal in the directory of file [c example.pml].
 
             [note
-                For instructions on how to do this in Windows, search for "open a terminal in Windows 11", or refer to [link url=https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/ text=this] article.
+                For instructions on how to do this in Windows, search for "open a terminal in Windows", or refer to [link url=https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/ text=this] article.
             ]
 
             Convert the PML file into an HTML file named [c example.html] by entering the following command:
@@ -92,7 +92,7 @@
             Here is an example of a terminal session in Windows:
             [input
                 C:\tests>pmlc p2h example.pml
-                INFO: Creating HTML file 'output\index.html'.
+                INFO: Creating HTML file 'output\example.html'.
                 C:\tests>
             input]
 [-

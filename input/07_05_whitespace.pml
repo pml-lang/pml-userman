@@ -1,6 +1,6 @@
 [ch (id=whitespace_handling) [title Whitespace Handling]
 
-    PML uses whitespace handling rules that aim to be simple, intuitive, practical, and consistent. It is important to be aware of these rules, because ignoring them can lead to surprising or unwanted results, especially in edge cases.
+    PML uses whitespace handling rules that aim to be intuitive and practical. It is important to be aware of these rules, because ignoring them can lead to surprising or unwanted results, especially in edge cases.
 
     As there is no standard and unique definition for [i whitespace], we first need to define some terms used in the context of PML:
     [list
@@ -111,6 +111,14 @@
                 [code
                     Paragraph 1. Paragraph 2.
                 code]
+            ]
+
+            [el [header Whitespace removal]
+
+                [list
+                    [el Leading and trailing whitespace in an auto-generated paragraph is removed.]
+                    [el An auto-generated paragraph containing only whitespace is removed.]
+                ]
             ]
 
             [el [header Whitespace does not define structure]

@@ -154,7 +154,7 @@
 
         To see if HTML attributes are [i allowed] for a given node, please refer to the [link url=[u:get pml_website]/docs/reference_manual/index.html text = "PML Reference Manual"].
 
-        To see the [i list] of attributes supported for a given node, please refer to the official HTML specification.
+        To see the [i list] of attributes supported for a given node, please refer to the official HTML specification. PMLC does not check if an HTML attribute is valid.
     ]
 
 [- TODO Uncomment as soon as command 'tag_info' is available again

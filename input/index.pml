@@ -1,7 +1,7 @@
 [doc [title PML User Manual]
 
     [table
-        [tr [tc [b PML Version]][tc 3.0.0 2022-08-07]]
+        [tr [tc [b PML Version]][tc 3.0.0 2022-08-19]]
         [tr [tc [b License]][tc [link url=https://creativecommons.org/licenses/by-nd/4.0/ text="CC BY-ND 4.0"]]]
         [tr [tc [b Author and Copyright]][tc Christian Neumanns]]
         [tr [tc [b Website]][tc [link url=https://www.pml-lang.dev/]]]

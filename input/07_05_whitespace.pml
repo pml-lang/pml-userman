@@ -57,7 +57,7 @@
                     this is text
                 code]
 
-                To preserve a sequence of several whitespace characters, the node [link url=https://www.pml-lang.dev/docs/reference_manual/index.html#node_sp text=sp] can be used to explicitly insert non-breaking spaces, and the node [link url=https://www.pml-lang.dev/docs/reference_manual/index.html#node_nl text=nl] can be used to explicitly insert new lines, e.g.:
+                To preserve a sequence of several whitespace characters, the node [link url=[u:get pml_website]/docs/reference_manual/index.html#node_sp text=sp] can be used to explicitly insert non-breaking spaces, and the node [link url=[u:get pml_website]/docs/reference_manual/index.html#node_nl text=nl] can be used to explicitly insert new lines, e.g.:
                 [code
                     this[sp][sp][sp][sp][sp]is[nl]text
                 code]
@@ -67,7 +67,7 @@
                     text
                 code]
 
-                Moreover, the [link url=https://www.pml-lang.dev/docs/reference_manual/index.html#node_monospace text=monospace] node can be used to insert a block of text in which whitespace is preserved (similar to the [c pre] tag in HTML):
+                Moreover, the [link url=[u:get pml_website]/docs/reference_manual/index.html#node_monospace text=monospace] node can be used to insert a block of text in which whitespace is preserved (similar to the [c pre] tag in HTML):
                 [code
                     [monospace
                     this     is

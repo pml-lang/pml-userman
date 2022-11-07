@@ -2,7 +2,7 @@
 
 SemVer="[[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+"
 if ! currPMLver="$(expr "$(pmlc --version 2> /dev/null)" : \
-				".*version\:\? \($SemVer\)")" ; then
+				".*\? \($SemVer\)")" ; then
 	echo "ERROR: You need to install the PML Converter:"
 	echo "       https://www.pml-lang.dev/downloads/install.html"
 	exit 1
@@ -16,7 +16,7 @@ if ! [[ $currPMLver == $reqPMLver ]] ;then
 			"and that you're using the latest PML version."
 fi
 
-pmlc convert --input_file input/text/index.pml
+pmlc p2h input/index.pml
 
 echo -e "\n/// Done ///"
 exit
